@@ -8,6 +8,29 @@ tags:
 
 # BRIA Background Removal v1.3
 
+Background removal capability across all categories and image types that capture the variety of the world.  
+
+
+### Model Description
+
+- **Developed by:** BRIA AI
+- **Model type:** Background removal image-to-image model
+  - **License:** [BriaRMBG-1.3](https://bria.ai/bria-2-0-huggingface-model-license-agreement/)
+- **Model Description:** BRIA RMBG 1.3 is an image-to-image model trained exclusively on a professional-grade. It is designed for commercial.
+- **Resources for more information:** [BRIA AI](https://bria.ai/)
+
+
+### Get Access
+BRIA RMBG 1.3 is available under the BRIA RMBG 1.3 License Agreement, allowing commercial usage with an attribution model that supports our data contributors. To access the model, please contact us. 
+By submitting this form, you agree to BRIA’s [Privacy policy](https://bria.ai/privacy-policy/) and [Terms & conditions](https://bria.ai/terms-and-conditions/).
+
+
+## Training data
+Bria-RMBG model was trained over 12000 high quality, high resolution images. 
+All images were manualy labeled pixel-wise accuratly. The images belong to veriety of categories, the majority of them inclues people. 
+
+## Qualitative Evaluation
+
 ## Usage
 
 ```python
@@ -63,8 +86,3 @@ im_array = (result*255).permute(1,2,0).cpu().data.numpy().astype(np.uint8)
 cv2.imwrite(os.path.join(result_path, im_name+".png"), im_array)
 ```
 
-## Training data
-Bria-RMBG model was trained over 12000 high quality, high resolution images. 
-All images were manualy labeled pixel-wise accuratly. The images belong to veriety of categories, the majority of them inclues people. 
-
-## Qualitative Evaluation

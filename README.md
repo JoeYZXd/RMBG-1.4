@@ -8,7 +8,7 @@ tags:
 
 # BRIA Background Removal v1.4 Model Card
 
-Background removal capability across all categories and image types that capture the variety of the world.  
+100% automatically Background removal capability across all categories and image types that capture the variety of the world.  
 
 
 

@@ -1,5 +1,5 @@
 ---
-license: apache-2.0
+license: other
 tags:
 - background-removal
 - Pytorch
@@ -15,7 +15,7 @@ Background removal capability across all categories and image types that capture
 
 - **Developed by:** BRIA AI
 - **Model type:** Background removal image-to-image model
-  - **License:** [BriaRMBG-1.3](https://bria.ai/bria-2-0-huggingface-model-license-agreement/)
+- **License:** [bria-2.0](https://bria.ai/bria-2-0-huggingface-model-license-agreement/)
 - **Model Description:** BRIA RMBG 1.3 is an image-to-image model trained exclusively on a professional-grade. It is designed for commercial.
 - **Resources for more information:** [BRIA AI](https://bria.ai/)
 
@@ -85,4 +85,3 @@ im_name=im_path.split('/')[-1].split('.')[0]
 im_array = (result*255).permute(1,2,0).cpu().data.numpy().astype(np.uint8)
 cv2.imwrite(os.path.join(result_path, im_name+".png"), im_array)
 ```
-

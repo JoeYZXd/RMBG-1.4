@@ -32,20 +32,31 @@ Bria-RMBG model was trained over 12000 high quality, high resolution, fully lice
 The training set as well as the validation benchmark if a holistic representation of the commercial world containing a distribution of general stock images, eComm, gaming and ads.
 
 Distribution of images:
-only people - 17.35%
-people with objects/animals - 25.24%
-only objects - 45.11%
-only animals - 1.89%
-only text - 2.52%
-people/objects/animals with text - 8.52%
+| Category | Distribution |
+| -----------------------------------| -----------------------------------:|
+| Objects only | 45.11 |
+| People with objects/animals | 25.24% |
+| People only | 17.35% |
+| people/objects/animals with text | 8.52% |
+| Text only | 2.52% |
+| Animals only | 1.89% |
 
-photorealistic - 87.70%
-non photorealistic - 12.30%
-solid bg - 47.95%
-non solid bg - 52.05%
-single main object in the foreground - 51.42%
-multiple objects in the foreground- 48.58%
+| Category | Distribution |
+| -----------------------------------| -----------------------------------------:|
+| Photorealistic | 87.70% |
+| Non-Photorealistic | 12.30% |
 
+
+| Category | Distribution |
+| -----------------------------------| -----------------------------------:|
+| Non Solid Background | 52.05% |
+| Solid Background | 47.95% 
+
+
+| Category | Distribution |
+| -----------------------------------| -----------------------------------:|
+| Single main foreground object | 51.42% |
+| Multiple objects in the foreground | 48.58% |
 
 All images were manualy labeled pixel-wise accuratly. 
 

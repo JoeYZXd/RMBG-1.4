@@ -8,7 +8,8 @@ tags:
 
 # BRIA Background Removal v1.4 Model Card
 
-100% automatically Background removal capability across all categories and image types that capture the variety of the world.  
+100% automatically Background removal capability across all categories and image types that capture the variety of the world. 
+Built and validated on a comprehensive dataset containing an equal distribution of general stock images, eComm, gaming and ads.
 
 
 
@@ -16,19 +17,37 @@ tags:
 
 - **Developed by:** BRIA AI
 - **Model type:** Background removal image-to-image model
-- **License:** [bria-2.0](https://bria.ai/bria-2-0-huggingface-model-license-agreement/)
-- **Model Description:** BRIA RMBG 1.4 is an image-to-image model trained exclusively on a professional-grade. It is designed for commercial.
+- **License:** [bria-rmbg-1.4](https://bria.ai/bria-2-0-huggingface-model-license-agreement/)
+- **Model Description:** BRIA RMBG 1.4 is an image-to-image model trained exclusively on a professional-grade dataset. It is designed and built for commercial use, subject to a commercial agreement with BRIA.
 - **Resources for more information:** [BRIA AI](https://bria.ai/)
 
 
 ### Get Access
-BRIA RMBG 1.3 is available under the BRIA RMBG 1.4 License Agreement, allowing commercial usage with an attribution model that supports our data contributors. To access the model, please contact us. 
+BRIA RMBG 1.4 is available under the BRIA RMBG 1.4 License Agreement. To access the model, please contact us. 
 By submitting this form, you agree to BRIA’s [Privacy policy](https://bria.ai/privacy-policy/) and [Terms & conditions](https://bria.ai/terms-and-conditions/).
 
 
 ## Training data
-Bria-RMBG model was trained over 12000 high quality, high resolution images. 
-All images were manualy labeled pixel-wise accuratly. The images belong to veriety of categories, the majority of them inclues people. 
+Bria-RMBG model was trained over 12000 high quality, high resolution, fully licensed images.
+The training set as well as the validation benchmark if a holistic representation of the commercial world containing a distribution of general stock images, eComm, gaming and ads.
+
+Distribution of images:
+only people - 17.35%
+people with objects/animals - 25.24%
+only objects - 45.11%
+only animals - 1.89%
+only text - 2.52%
+people/objects/animals with text - 8.52%
+
+photorealistic - 87.70%
+non photorealistic - 12.30%
+solid bg - 47.95%
+non solid bg - 52.05%
+single main object in the foreground - 51.42%
+multiple objects in the foreground- 48.58%
+
+
+All images were manualy labeled pixel-wise accuratly. 
 
 ## Qualitative Evaluation
 

@@ -34,7 +34,7 @@ The training set as well as the validation benchmark if a holistic representatio
 Distribution of images:
 | Category | Distribution |
 | -----------------------------------| -----------------------------------:|
-| Objects only | 45.11 |
+| Objects only | 45.11% |
 | People with objects/animals | 25.24% |
 | People only | 17.35% |
 | people/objects/animals with text | 8.52% |

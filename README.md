@@ -62,7 +62,7 @@ All images were manualy labeled pixel-wise accuratly.
 
 ## Qualitative Evaluation
 
-![examples](example.png)
+![examples](exapmle.png)
 
 
 

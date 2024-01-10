@@ -1,9 +1,12 @@
 ---
 license: other
 tags:
-- background-removal
+- remove vackground
+- background
+- background removal
 - Pytorch
 - vision
+- legal liability
 ---
 
 # BRIA Background Removal v1.4 Model Card

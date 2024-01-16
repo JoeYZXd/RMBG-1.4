@@ -1,7 +1,7 @@
 ---
 license: other
 tags:
-- remove vackground
+- remove background
 - background
 - background removal
 - Pytorch

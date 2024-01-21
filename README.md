@@ -14,6 +14,7 @@ tags:
 100% automatically Background removal capability across all categories and image types that capture the variety of the world. 
 Built and validated on a comprehensive dataset containing an equal distribution of general stock images, eComm, gaming and ads.
 
+![examples](t3.png)
 
 ### Model Description
 

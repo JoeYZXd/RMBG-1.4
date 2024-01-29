@@ -1,5 +1,8 @@
 ---
 license: other
+licence_name: bria-rmbg-1.4
+license_link: https://bria.ai/bria-huggingface-model-license-agreement/
+
 tags:
 - remove background
 - background
@@ -7,6 +10,16 @@ tags:
 - Pytorch
 - vision
 - legal liability
+
+extra_gated_prompt: This model weights by BRIA AI can be obtained after a commercial license is agreed upon. Fill in the form below and we reach out to you.
+extra_gated_fields:
+  Name: text
+  Company/Org name: text
+  Org Type (Early/Growth Startup, Enterprise, Academy): text
+  Role: text
+  Country: text
+  Email: text
+  By submitting this form, I agree to BRIA’s Privacy policy and Terms & conditions, see links below: checkbox
 ---
 
 # BRIA Background Removal v1.4 Model Card

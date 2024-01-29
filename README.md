@@ -21,14 +21,11 @@ Built and validated on a comprehensive dataset containing an equal distribution 
 - **Developed by:** BRIA AI
 - **Model type:** Background removal image-to-image model
 - **License:** [bria-rmbg-1.4](https://bria.ai/bria-huggingface-model-license-agreement/)
+  - The model is open for non-commercial use.
+  - Commercial use is subject to a commercial agreement with BRIA. [Contact Us](https://bria.ai/contact-us)
 
-- **Model Description:** BRIA RMBG 1.4 is an image-to-image model trained exclusively on a professional-grade dataset. It is designed and built for commercial use, subject to a commercial agreement with BRIA.
+- **Model Description:** BRIA RMBG 1.4 is an image-to-image model trained exclusively on a professional-grade dataset.
 - **Resources for more information:** [BRIA AI](https://bria.ai/)
-
-
-### Get Access
-BRIA RMBG 1.4 is available under the BRIA RMBG 1.4 License Agreement. To access the model, please contact us. 
-By submitting this form, you agree to BRIA’s [Privacy policy](https://bria.ai/privacy-policy/) and [Terms & conditions](https://bria.ai/terms-and-conditions/).
 
 
 ## Training data

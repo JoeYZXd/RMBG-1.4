@@ -83,6 +83,10 @@ For clarity, we provide our data distribution according to different categories,
 
 - **Inference Time :** 1 sec on Nvidia A10 GPU
 
+## Architecture
+
+The model’s architecture is based on [IS-Net](https://github.com/xuebinqin/DIS). 
+Yet, we employ a distinct training scheme and utilize our proprietary data for the training process, enhancing the model's effectiveness.
 
 
 ## Usage

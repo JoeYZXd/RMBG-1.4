@@ -24,27 +24,30 @@ extra_gated_fields:
 
 # BRIA Background Removal v1.4 Model Card
 
-100% automatically Background removal capability across all categories and image types that capture the variety of the world. 
-Built and validated on a comprehensive dataset containing an equal distribution of general stock images, eComm, gaming and ads.
+RMBG v1.4 is our state-of-the-art background removal model, designed to effectively separate foreground from background in a range of
+categories and image types. This model has been trained on a carefully selected dataset, which includes:
+general stock images, e-commerce, gaming, and advertising content, making it suitable for various use cases. 
+Developed by BRIA AI, RMBG v1.4 is available as an open-source tool for non-commercial use.
+
 
 ![examples](t4.png)
 
 ### Model Description
 
 - **Developed by:** [BRIA AI](https://bria.ai/)
-- **Model type:** Background removal image-to-image model
+- **Model type:** Background Removal 
 - **License:** [bria-rmbg-1.4](https://bria.ai/bria-huggingface-model-license-agreement/)
   - The model is open for non-commercial use.
   - Commercial use is subject to a commercial agreement with BRIA. [Contact Us](https://bria.ai/contact-us)
 
-- **Model Description:** BRIA RMBG 1.4 is an image-to-image model trained exclusively on a professional-grade dataset.
+- **Model Description:** BRIA RMBG 1.4 is an saliency segmentation model trained exclusively on a professional-grade dataset.
 
 
 
 ## Training data
-Bria-RMBG model was trained over 12000 high quality, high resolution, fully licensed images.
-The training set as well as the validation benchmark if a holistic representation of the commercial world containing a distribution of general stock images, eComm, gaming and ads.
-
+Bria-RMBG model was trained over 12,000 high-quality, high-resolution, fully licensed images.
+All images were manualy labeled pixel-wise accuratly. 
+For clarity, we provide our data distribution according to different categories, demonstrating our model’s versatility:
 Distribution of images:
 | Category | Distribution |
 | -----------------------------------| -----------------------------------:|
@@ -72,7 +75,6 @@ Distribution of images:
 | Single main foreground object | 51.42% |
 | Multiple objects in the foreground | 48.58% |
 
-All images were manualy labeled pixel-wise accuratly. 
 
 ## Qualitative Evaluation
 

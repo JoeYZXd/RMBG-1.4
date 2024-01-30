@@ -45,10 +45,11 @@ Developed by BRIA AI, RMBG v1.4 is available as an open-source tool for non-comm
 
 
 ## Training data
-Bria-RMBG model was trained over 12,000 high-quality, high-resolution, fully licensed images.
-All images were manualy labeled pixel-wise accuratly. 
-For clarity, we provide our data distribution according to different categories, demonstrating our model’s versatility:
-Distribution of images:
+Bria-RMBG model was trained over 12,000 high-quality, high-resolution, manually labeled (pixel-wise accuracy), fully licensed images.
+For clarity, we provide our data distribution according to different categories, demonstrating our model’s versatility.
+
+### Distribution of images:
+
 | Category | Distribution |
 | -----------------------------------| -----------------------------------:|
 | Objects only | 45.11% |

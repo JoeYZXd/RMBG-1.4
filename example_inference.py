@@ -18,10 +18,7 @@ def example_inference():
     model_input_size = [1024,1024]
     orig_im = io.imread(im_path)
     orig_im_size = orig_im.shape[0:2]
-    image = preprocess_image(orig_im, model_input_size)
-
-    if torch.cuda.is_available():
-        image=image.cuda()
+    image = preprocess_image(orig_im, model_input_size).to(device)
 
     # inference 
     result=net(image)

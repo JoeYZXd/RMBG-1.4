@@ -29,7 +29,7 @@ categories and image types. This model has been trained on a carefully selected 
 general stock images, e-commerce, gaming, and advertising content, making it suitable for various use cases. 
 Developed by BRIA AI, RMBG v1.4 is available as an open-source tool for non-commercial use.
 
-
+[CLICK HERE FOR A DEMO](https://huggingface.co/spaces/briaai/BRIA-RMBG-1.4)
 ![examples](t4.png)
 
 ### Model Description

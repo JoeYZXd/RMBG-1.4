@@ -1,55 +1,42 @@
-import os
-import numpy as np
 from skimage import io
-import cv2
-import torch
-import torch.nn.functional as F
-from torchvision.transforms.functional import normalize
+import torch, os
+from PIL import Image
 from briarmbg import BriaRMBG
-
+from utilities import preprocess_image, postprocess_image
 
 def example_inference():
 
-    input_size=[1024,1024]
-    net=BriaRMBG()
+    model_path = f"{os.path.dirname(__file__)}/model.pth"
+    im_path = f"{os.path.dirname(__file__)}/example_input.jpg"
 
-    model_path = "./model.pth"
-    im_path = "./example_image.jpg"
-    result_path = "."
-
+    net = BriaRMBG()
     if torch.cuda.is_available():
-        net.load_state_dict(torch.load(model_path))
-        net=net.cuda()
+        net.load_state_dict(torch.load(model_path)).cuda()
     else:
         net.load_state_dict(torch.load(model_path,map_location="cpu"))
     net.eval()    
 
     # prepare input
-    im = io.imread(im_path)
-    if len(im.shape) < 3:
-        im = im[:, :, np.newaxis]
-    im_size=im.shape[0:2]
-    im_tensor = torch.tensor(im, dtype=torch.float32).permute(2,0,1)
-    im_tensor = F.interpolate(torch.unsqueeze(im_tensor,0), size=input_size, mode='bilinear').type(torch.uint8)
-    image = torch.divide(im_tensor,255.0)
-    image = normalize(image,[0.5,0.5,0.5],[1.0,1.0,1.0])
+    model_input_size = [1024,1024]
+    orig_im = io.imread(im_path)
+    orig_im_size = orig_im.shape[0:2]
+    image = preprocess_image(orig_im, model_input_size)
 
     if torch.cuda.is_available():
         image=image.cuda()
-    
-    #inference
+
+    # inference 
     result=net(image)
 
     # post process
-    result = torch.squeeze(F.interpolate(result[0][0], size=im_size, mode='bilinear') ,0)
-    ma = torch.max(result)
-    mi = torch.min(result)
-    result = (result-mi)/(ma-mi)
+    result_image = postprocess_image(result[0][0], orig_im_size)
 
     # save result
-    im_name=im_path.split('/')[-1].split('.')[0]
-    im_array = (result*255).permute(1,2,0).cpu().data.numpy().astype(np.uint8)
-    cv2.imwrite(os.path.join(result_path, im_name+".png"), im_array)
+    pil_im = Image.fromarray(result_image)
+    no_bg_image = Image.new("RGBA", pil_im.size, (0,0,0,0))
+    orig_image = Image.open(im_path)
+    no_bg_image.paste(orig_image, mask=pil_im)
+    no_bg_image.save("example_image_no_bg.png")
 
 
 if __name__ == "__main__":

@@ -104,8 +104,8 @@ from PIL import Image
 from briarmbg import BriaRMBG
 from utilities import preprocess_image, postprocess_image
 
-model_path = f"{os.path.dirname(__file__)}/model.pth"
-im_path = f"{os.path.dirname(__file__)}/example_input.jpg"
+model_path = f"{os.path.dirname(os.path.abspath(__file__))}/model.pth"
+im_path = f"{os.path.dirname(os.path.abspath(__file__))}/example_input.jpg"
 
 net = BriaRMBG()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

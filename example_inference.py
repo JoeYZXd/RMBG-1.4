@@ -10,10 +10,8 @@ def example_inference():
     im_path = f"{os.path.dirname(__file__)}/example_input.jpg"
 
     net = BriaRMBG()
-    if torch.cuda.is_available():
-        net.load_state_dict(torch.load(model_path)).cuda()
-    else:
-        net.load_state_dict(torch.load(model_path,map_location="cpu"))
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    net.load_state_dict(torch.load(model_path, map_location=device))
     net.eval()    
 
     # prepare input

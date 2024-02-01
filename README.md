@@ -1,6 +1,6 @@
 ---
 license: other
-licence_name: bria-rmbg-1.4
+license_name: bria-rmbg-1.4
 license_link: LICENSE
 
 tags:

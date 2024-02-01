@@ -89,9 +89,11 @@ For clarity, we provide our data distribution according to different categories,
 RMBG v1.4 is developed on the [IS-Net](https://github.com/xuebinqin/DIS) enhanced with our unique training scheme and proprietary dataset. These modifications significantly improve the model’s accuracy and effectiveness in diverse image-processing scenarios.
 
 ## installation
+```bash
 git clone https://huggingface.co/briaai/RMBG-1.4
 cd RMBG-1.4/
 pip install -r requirements.txt
+```
 
 ## Usage
 

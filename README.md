@@ -98,34 +98,25 @@ pip install -r requirements.txt
 ## Usage
 
 ```python
-import numpy as np
 from skimage import io
-import torch
-import torch.nn.functional as F
-from torchvision.transforms.functional import normalize
-from briarmbg import BriaRMBG
+import torch, os
 from PIL import Image
+from briarmbg import BriaRMBG
+from utilities import preprocess_image, postprocess_image
 
-model_path = "./model.pth"
-im_path = "./example_input.jpg"
+model_path = f"{os.path.dirname(__file__)}/model.pth"
+im_path = f"{os.path.dirname(__file__)}/example_input.jpg"
 
 net = BriaRMBG()
-if torch.cuda.is_available():
-    net.load_state_dict(torch.load(model_path)).cuda()
-else:
-    net.load_state_dict(torch.load(model_path,map_location="cpu"))
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+net.load_state_dict(torch.load(model_path, map_location=device))
 net.eval()    
 
 # prepare input
-model_input_size=[1024,1024]
-im = io.imread(im_path)
-if len(im.shape) < 3:
-    im = im[:, :, np.newaxis]
-im_size=im.shape[0:2]
-im_tensor = torch.tensor(im, dtype=torch.float32).permute(2,0,1)
-im_tensor = F.interpolate(torch.unsqueeze(im_tensor,0), size=model_input_size, mode='bilinear').type(torch.uint8)
-image = torch.divide(im_tensor,255.0)
-image = normalize(image,[0.5,0.5,0.5],[1.0,1.0,1.0])
+model_input_size = [1024,1024]
+orig_im = io.imread(im_path)
+orig_im_size = orig_im.shape[0:2]
+image = preprocess_image(orig_im, model_input_size)
 
 if torch.cuda.is_available():
     image=image.cuda()
@@ -134,14 +125,10 @@ if torch.cuda.is_available():
 result=net(image)
 
 # post process
-result = torch.squeeze(F.interpolate(result[0][0], size=im_size, mode='bilinear') ,0)
-ma = torch.max(result)
-mi = torch.min(result)
-result = (result-mi)/(ma-mi)
+result_image = postprocess_image(result[0][0], orig_im_size)
 
 # save result
-im_array = (result*255).permute(1,2,0).cpu().data.numpy().astype(np.uint8)
-pil_im = Image.fromarray(np.squeeze(im_array))
+pil_im = Image.fromarray(result_image)
 no_bg_image = Image.new("RGBA", pil_im.size, (0,0,0,0))
 orig_image = Image.open(im_path)
 no_bg_image.paste(orig_image, mask=pil_im)

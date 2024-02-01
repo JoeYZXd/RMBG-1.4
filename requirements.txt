@@ -1,8 +1,7 @@
-gradio
-gradio_imageslider
+os
 torch
 torchvision
 pillow
 numpy
 typing
-gitpython
+scikit-image

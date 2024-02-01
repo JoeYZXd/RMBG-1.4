@@ -1,7 +1,7 @@
 ---
 license: other
 license_name: bria-rmbg-1.4
-license_link: LICENSE
+license_link: https://bria.ai/bria-huggingface-model-license-agreement/
 
 tags:
 - remove background

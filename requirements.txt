@@ -1,4 +1,3 @@
-os
 torch
 torchvision
 pillow

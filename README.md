@@ -86,7 +86,6 @@ For clarity, we provide our data distribution according to different categories,
 
 ![examples](results.png)
 
-- **Inference Time :** 1 sec on Nvidia A10 GPU
 
 ## Architecture
 

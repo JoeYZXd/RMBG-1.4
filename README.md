@@ -26,8 +26,10 @@ extra_gated_fields:
 
 RMBG v1.4 is our state-of-the-art background removal model, designed to effectively separate foreground from background in a range of
 categories and image types. This model has been trained on a carefully selected dataset, which includes:
-general stock images, e-commerce, gaming, and advertising content, making it suitable for various use cases. 
-Developed by BRIA AI, RMBG v1.4 is available as an open-source tool for non-commercial use.
+general stock images, e-commerce, gaming, and advertising content, making it suitable commercial use cases powering enterprise content creation at scale. 
+It is ideal where content safety, legally licensed datasets, and bias mitigation is paramount. 
+
+Developed by BRIA AI, RMBG v1.4 is available as an open-source model for non-commercial use.
 
 [CLICK HERE FOR A DEMO](https://huggingface.co/spaces/briaai/BRIA-RMBG-1.4)
 ![examples](t4.png)
@@ -37,7 +39,7 @@ Developed by BRIA AI, RMBG v1.4 is available as an open-source tool for non-comm
 - **Developed by:** [BRIA AI](https://bria.ai/)
 - **Model type:** Background Removal 
 - **License:** [bria-rmbg-1.4](https://bria.ai/bria-huggingface-model-license-agreement/)
-  - The model is open for non-commercial use.
+  - The model is released under an open-source license for non-commercial use.
   - Commercial use is subject to a commercial agreement with BRIA. [Contact Us](https://bria.ai/contact-us) for more information. 
 
 - **Model Description:** BRIA RMBG 1.4 is an saliency segmentation model trained exclusively on a professional-grade dataset.
@@ -86,7 +88,8 @@ For clarity, we provide our data distribution according to different categories,
 
 ## Architecture
 
-RMBG v1.4 is developed on the [IS-Net](https://github.com/xuebinqin/DIS) enhanced with our unique training scheme and proprietary dataset. These modifications significantly improve the model’s accuracy and effectiveness in diverse image-processing scenarios.
+RMBG v1.4 is developed on the [DIS neural network architecture](https://github.com/xuebinqin/DIS) enhanced with our unique training scheme and proprietary dataset. 
+These modifications significantly improve the model’s accuracy and effectiveness in diverse image-processing scenarios.
 
 ## Installation
 ```bash

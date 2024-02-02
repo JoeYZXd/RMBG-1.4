@@ -27,6 +27,7 @@ extra_gated_fields:
 RMBG v1.4 is our state-of-the-art background removal model, designed to effectively separate foreground from background in a range of
 categories and image types. This model has been trained on a carefully selected dataset, which includes:
 general stock images, e-commerce, gaming, and advertising content, making it suitable for commercial use cases powering enterprise content creation at scale. 
+The accuracy, efficiency, and versatility currently rival leading commercial models. 
 It is ideal where content safety, legally licensed datasets, and bias mitigation are paramount. 
 
 Developed by BRIA AI, RMBG v1.4 is available as an open-source model for non-commercial use.

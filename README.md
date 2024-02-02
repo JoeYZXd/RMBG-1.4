@@ -48,7 +48,8 @@ Developed by BRIA AI, RMBG v1.4 is available as an open-source model for non-com
 
 
 ## Training data
-Bria-RMBG model was trained over 12,000 high-quality, high-resolution, manually labeled (pixel-wise accuracy), fully licensed images.
+Bria-RMBG model was trained with over 12,000 high-quality, high-resolution, manually labeled (pixel-wise accuracy), fully licensed images.
+Our benchmark included balanced gender, balanced ethnicity, and people with different types of disabilities.
 For clarity, we provide our data distribution according to different categories, demonstrating our model’s versatility.
 
 ### Distribution of images:

@@ -89,7 +89,7 @@ For clarity, we provide our data distribution according to different categories,
 
 ## Architecture
 
-RMBG v1.4 is developed on the [DIS neural network architecture](https://github.com/xuebinqin/DIS) enhanced with our unique training scheme and proprietary dataset. 
+RMBG v1.4 is developed on the [IS-Net](https://github.com/xuebinqin/DIS) enhanced with our unique training scheme and proprietary dataset. 
 These modifications significantly improve the model’s accuracy and effectiveness in diverse image-processing scenarios.
 
 ## Installation

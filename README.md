@@ -43,7 +43,7 @@ Developed by BRIA AI, RMBG v1.4 is available as an open-source model for non-com
   - The model is released under an open-source license for non-commercial use.
   - Commercial use is subject to a commercial agreement with BRIA. [Contact Us](https://bria.ai/contact-us) for more information. 
 
-- **Model Description:** BRIA RMBG 1.4 is an saliency segmentation model trained exclusively on a professional-grade dataset.
+- **Model Description:** BRIA RMBG 1.4 is a saliency segmentation model trained exclusively on a professional-grade dataset.
 - **BRIA:** Resources for more information: [BRIA AI](https://bria.ai/)
 
 

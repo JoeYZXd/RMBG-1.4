@@ -4,3 +4,4 @@ pillow
 numpy
 typing
 scikit-image
+huggingface_hub

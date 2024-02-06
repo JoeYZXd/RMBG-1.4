@@ -2,11 +2,11 @@
 license: other
 license_name: bria-rmbg-1.4
 license_link: https://bria.ai/bria-huggingface-model-license-agreement/
-
+pipeline_tag: image-to-image
 tags:
 - remove background
 - background
-- background removal
+- background-removal
 - Pytorch
 - vision
 - legal liability

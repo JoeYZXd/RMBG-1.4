@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from huggingface_hub import PyTorchModelHubMixin
 
 class REBNCONV(nn.Module):
     def __init__(self,in_ch=3,out_ch=3,dirate=1,stride=1):
@@ -344,11 +345,12 @@ class myrebnconv(nn.Module):
         return self.rl(self.bn(self.conv(x)))
 
 
-class BriaRMBG(nn.Module):
+class BriaRMBG(nn.Module, PyTorchModelHubMixin):
 
-    def __init__(self,in_ch=3,out_ch=1):
+    def __init__(self,config:dict={"in_ch":3,"out_ch":1}):
         super(BriaRMBG,self).__init__()
-
+        in_ch=config["in_ch"]
+        out_ch=config["out_ch"]
         self.conv_in = nn.Conv2d(in_ch,64,3,stride=2,padding=1)
         self.pool_in = nn.MaxPool2d(2,stride=2,ceil_mode=True)
 

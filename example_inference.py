@@ -11,7 +11,7 @@ def example_inference():
 
     net = BriaRMBG()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    net = BriaRMBG.from_pretrained("briaai/RMBG-1.4-experiment")
+    net = BriaRMBG.from_pretrained("briaai/RMBG-1.4")
     net.to(device)
     net.eval()    
 

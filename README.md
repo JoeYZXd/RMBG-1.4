@@ -40,7 +40,7 @@ Developed by BRIA AI, RMBG v1.4 is available as an source-available model for no
 - **Developed by:** [BRIA AI](https://bria.ai/)
 - **Model type:** Background Removal 
 - **License:** [bria-rmbg-1.4](https://bria.ai/bria-huggingface-model-license-agreement/)
-  - The model is released under an Creative Commons license for non-commercial use.
+  - The model is released under a Creative Commons license for non-commercial use.
   - Commercial use is subject to a commercial agreement with BRIA. [Contact Us](https://bria.ai/contact-us) for more information. 
 
 - **Model Description:** BRIA RMBG 1.4 is a saliency segmentation model trained exclusively on a professional-grade dataset.

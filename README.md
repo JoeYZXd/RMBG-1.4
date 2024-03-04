@@ -110,9 +110,9 @@ from utilities import preprocess_image, postprocess_image
 
 im_path = f"{os.path.dirname(os.path.abspath(__file__))}/example_input.jpg"
 
-net = BriaRMBG()
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 net = BriaRMBG.from_pretrained("briaai/RMBG-1.4")
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 net.to(device)
 
 # prepare input
